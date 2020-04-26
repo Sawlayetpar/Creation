@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="600.0" stylesheets="@../Sheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ld.views.IwatchView">
+   <children>
+      <HBox alignment="CENTER" prefHeight="90.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="CENTER" prefWidth="348.0">
+               <children>
+                  <Label fx:id="msg" prefHeight="70.0" prefWidth="355.0" text="You won an appleWatch" textAlignment="CENTER">
+                     <font>
+                        <Font name="Comic Sans MS" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="82.0" prefWidth="25.0">
+               <HBox.margin>
+                  <Insets left="220.0" top="8.0" />
+               </HBox.margin>
+               <children>
+                  <SVGPath fx:id="close" content="M12.5 1.389c-6.137 0-11.111 4.974-11.111 11.111s4.974 11.111 11.111 11.111 11.111-4.974 11.111-11.111-4.974-11.111-11.111-11.111zM12.5 20.833c-4.595 0-8.333-3.738-8.333-8.333s3.738-8.333 8.333-8.333 8.333 3.738 8.333 8.333-3.738 8.333-8.333 8.333z M16.28 8.739l-0.019-0.019c-0.515-0.515-1.351-0.515-1.866 0l-1.895 1.895-1.895-1.895c-0.515-0.515-1.351-0.515-1.866 0l-0.019 0.019c-0.515 0.515-0.515 1.351 0 1.866l1.895 1.895-1.895 1.895c-0.515 0.515-0.515 1.351 0 1.866l0.019 0.019c0.515 0.515 1.351 0.515 1.866 0l1.895-1.895 1.895 1.895c0.515 0.515 1.351 0.515 1.866 0l0.019-0.019c0.515-0.515 0.515-1.351 0-1.866l-1.895-1.895 1.895-1.895c0.515-0.515 0.515-1.351 0-1.866z" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <ImageView fitHeight="390.0" fitWidth="446.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Prizes/iwatch.jpg" />
+         </image></ImageView>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#ok" prefHeight="42.0" prefWidth="121.0" text="ok" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

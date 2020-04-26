@@ -1,0 +1,14 @@
+.textfeild{
+	-fx-background-color: #ffffff;
+	-fx-border-color: #03bffc;
+	-fx-border-radius: 15px;
+	-fx-prompt-text-fill: #bbbbbb;
+	-fx-font-family: "Arial Narrow";
+}
+.button{
+	-fx-background-color: #ffffff;
+	-fx-border-radius: 25px;
+	-fx-border-style: solid;
+	-fx-border-color: #000000;
+	-fx-font-family: "Bookman Old Style";
+}

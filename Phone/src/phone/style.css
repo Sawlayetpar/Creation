@@ -1,0 +1,12 @@
+.backgroung{
+	-fx-background-color: #2fa0e7;
+}
+.anotherBackground{
+	-fx-background-color: #dadada;
+}
+Button{
+	-fx-background-color: #ffffff;
+	-fx-border-color: #ffd7a2;
+	-fx-background-radius: 25px;
+	-fx-border-radius: 25px;
+}

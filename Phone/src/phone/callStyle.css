@@ -1,0 +1,17 @@
+.numBtn{
+	-fx-background-color: #ffffff;
+	-fx-background-radius: 25px;
+}
+
+.back{
+	-fx-background-color: #2fa0e7;
+}
+
+.anotherBackground{
+	-fx-background-color: #dadada;
+}
+
+.callBtn{
+	-fx-background-color: #88CA5E;
+	-fx-background-radius: 25px;
+}

@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.shape.SVGPath;
+import phone.common.Security;
 
 public class Home implements Initializable{
 
@@ -33,8 +34,8 @@ public class Home implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		exit.setOnMouseClicked(e -> Platform.exit());
-//		number.setText(Security.getPhoneNo().getPhone_no());
-//		balance.setText(Security.getPhoneBal().getBalance());
+		number.setText(Security.getPhone_no().getPhone_no());
+		balance.setText(Security.getPhone_bal().getBalance());
 	}
     
 }

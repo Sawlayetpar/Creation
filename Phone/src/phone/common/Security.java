@@ -2,26 +2,23 @@ package phone.common;
 
 import phone.dto.Phone;
 
-public class Security {
+public final class Security {
 
-	private static Phone phoneNo;
-	private static Phone phoneBal;
-
-	public static Phone getPhoneBal() {
-		return phoneBal;
+	private static Phone phone_no;
+	private static Phone phone_bal;
+	
+	public static Phone getPhone_no() {
+		phone_no = new Phone();
+		phone_no.getPhone_no();
+		return phone_no;
 	}
-
-	public static void setPhoneBal(Phone bal) {
-		phoneBal = bal;
+	public static Phone getPhone_bal() {
+		phone_bal = new Phone();
+		phone_bal.getBalance();
+		return phone_bal;
 	}
-
-	public static Phone getPhoneNo() {
-		return phoneNo;
-	}
-
-	public static void setPhoneNo(Phone phone_no) {
-		phoneNo = phone_no;
-	}
+	
+	
 
 	
 }

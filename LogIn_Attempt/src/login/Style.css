@@ -1,0 +1,15 @@
+.username{
+	-fx-border-color: #484949; 
+	-fx-border-radius: 20px;
+	-fx-background-radius: 20px;
+	-fx-prompt-text-fill: #000000;
+	-fx-text-fill: #000000;
+}
+
+.button{
+	-fx-border-color: grey;
+	-fx-border-radius: 20px;
+	-fx-background-color: transparent ;
+	-fx-background-radius: 20px;
+}
+

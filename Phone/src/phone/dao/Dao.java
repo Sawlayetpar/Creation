@@ -8,5 +8,6 @@ public interface Dao {
 		return new DaoImpl();
 	}
 	
-	void TopUp(Phone phone);
+	void topup(Phone phone);
+	Phone login(String number);
 }

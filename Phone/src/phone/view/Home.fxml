@@ -48,7 +48,7 @@
                   <Font name="Corbel Light" size="40.0" />
                </font>
             </Text>
-            <Label fx:id="balance" alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="160.0" text="4545" textAlignment="RIGHT">
+            <Label fx:id="balance" alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="160.0" textAlignment="RIGHT">
                <font>
                   <Font name="Century" size="25.0" />
                </font>
@@ -104,7 +104,7 @@
                   <Font name="Century" size="25.0" />
                </font>
             </Text>
-            <Label fx:id="number" prefHeight="32.0" prefWidth="170.0" text="09782207170">
+            <Label fx:id="number" prefHeight="32.0" prefWidth="170.0">
                <font>
                   <Font name="MS PGothic" size="30.0" />
                </font>

@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.scene.shape.SVGPath;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -61,32 +62,42 @@ public class Call implements Initializable {
 	
 	@FXML
 	void call() {
-
+		System.out.println("Call Processing");
 	}
 
 	@FXML
 	void delete() {
-
+		screen.clear();
 	}
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		exit.setOnMouseClicked(e -> screen.getScene().getWindow().hide());
 		
-		one.setText("1");
-		two.setText("2");
-		three.setText("3");
-		four.setText("4");
-		five.setText("5");
-		six.setText("6");
-		seven.setText("7");
-		eight.setText("8");
-		nine.setText("9");
-		zero.setText("0");
-		star.setText("*");
-		hash.setText("#");
+		one.setOnAction(e -> screen.setText(screen.getText()+ "1"));
+		two.setOnAction(e -> screen.setText(screen.getText()+ "2"));
+		three.setOnAction(e -> screen.setText(screen.getText()+ "3"));
+		four.setOnAction(e -> screen.setText(screen.getText()+ "4"));
+		five.setOnAction(e -> screen.setText(screen.getText()+ "5"));
+		six.setOnAction(e -> screen.setText(screen.getText()+ "6"));
+		seven.setOnAction(e -> screen.setText(screen.getText()+ "7"));
+		eight.setOnAction(e -> screen.setText(screen.getText()+ "8"));
+		nine.setOnAction(e -> screen.setText(screen.getText()+ "9"));
+		zero.setOnAction(e -> screen.setText(screen.getText()+ "0"));
+		star.setOnAction(e -> screen.setText(screen.getText()+ "*"));
+		hash.setOnAction(e -> screen.setText(screen.getText()+ "#"));
+		
+		screen.setEditable(false);
+		screen.setOnKeyPressed(e -> {
+			if(e.getCode() == KeyCode.ENTER) {
+				 call();
+			}
+		});
+		
 		
 	}
+	
+	
 	
 	public static void show() {
 		try {

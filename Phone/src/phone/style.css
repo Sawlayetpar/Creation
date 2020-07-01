@@ -10,3 +10,8 @@ Button{
 	-fx-background-radius: 25px;
 	-fx-border-radius: 25px;
 }
+.textfield{
+	-fx-background-color: transparent ;
+	-fx-border-style: solid ;
+	-fx-border-radius: 25px;
+}

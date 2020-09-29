@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="350.0" stylesheets="@../../StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tc.view.admin.Class_Teacher_Detail">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="350.0" styleClass="bgcolor_blue">
+         <children>
+            <GridPane prefHeight="100.0" prefWidth="350.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="323.0" minWidth="10.0" prefWidth="298.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="52.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox fx:id="back" alignment="CENTER" prefHeight="45.0" prefWidth="51.0" GridPane.columnIndex="1">
+                     <children>
+                        <SVGPath content="M0.781 12.5l11.719 11.719v-7.031h12.5v-9.375h-12.5v-7.031z" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BACK">
+                           <font>
+                              <Font name="Impact" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="242.0">
+                     <children>
+                        <SVGPath content="M7.813 4.688c0-2.589 2.099-4.688 4.688-4.688s4.688 2.099 4.688 4.688c0 2.589-2.099 4.688-4.688 4.688s-4.688-2.099-4.688-4.688zM18.752 10.938h-0.865l-4.861 9.869 1.818-9.088-2.344-2.344-2.344 2.344 1.818 9.088-4.861-9.869h-0.865c-3.123 0-3.123 2.099-3.123 4.688v7.813h18.75v-7.813c0-2.588 0-4.688-3.123-4.688z" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Class Teacher" textAlignment="CENTER" wrappingWidth="198.13671875">
+                           <font>
+                              <Font name="Century" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <GridPane prefHeight="250.0" prefWidth="350.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="139.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="211.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NAME">
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="INCHARGE" wrappingWidth="89.13671875" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="id" prefHeight="25.0" prefWidth="170.0" styleClass="textfield" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <CheckBox fx:id="incharge" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <Button fx:id="save" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Save" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="cancle" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Cancle" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

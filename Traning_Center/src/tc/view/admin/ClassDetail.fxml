@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" stylesheets="@../../StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tc.view.admin.ClassDetail">
+   <children>
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="500.0" styleClass="bgcolor_blue">
+         <children>
+            <GridPane prefHeight="70.0" prefWidth="540.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="481.0" minWidth="10.0" prefWidth="463.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="37.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Class" textAlignment="CENTER" wrappingWidth="100.13671875">
+                     <font>
+                        <Font name="Century" size="30.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="200.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <SVGPath content="M6.5 4.316v8.684l2.691-1.625 2.742 1.625v-8.684h-5.434zM19.5 2.184q0.863 0 1.523 0.635t0.66 1.498v17.367q0 0.863-0.66 1.498t-1.523 0.635h-13q-0.863 0-1.523-0.635t-0.66-1.498v-17.367q0-0.863 0.66-1.498t1.523-0.635h13z">
+                     <GridPane.margin>
+                        <Insets left="195.0" />
+                     </GridPane.margin>
+                  </SVGPath>
+                  <SVGPath fx:id="back" content="M21.27 19.512l-4.512-4.512 4.512-4.512-1.758-1.758-4.512 4.512-4.512-4.512-1.758 1.758 4.512 4.512-4.512 4.512 1.758 1.758 4.512-4.512 4.512 4.512zM15 2.52q5.156 0 8.818 3.662t3.662 8.818-3.662 8.818-8.818 3.662-8.818-3.662-3.662-8.818 3.662-8.818 8.818-3.662z" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="30.0" left="5.0" />
+                     </GridPane.margin>
+                  </SVGPath>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <GridPane prefHeight="330.0" prefWidth="500.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="209.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="326.0" minWidth="10.0" prefWidth="291.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="START DATE" wrappingWidth="116.13671875">
+               <GridPane.margin>
+                  <Insets left="80.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="END DATE" wrappingWidth="98.13671875" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="80.0" />
+               </GridPane.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="COURSE" wrappingWidth="98.13671875" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="80.0" />
+               </GridPane.margin>
+            </Text>
+            <Button fx:id="cancle" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" text="CANCLE" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="save" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" text="SAVE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="180.0" />
+               </GridPane.margin>
+            </Button>
+            <DatePicker fx:id="start_date" prefHeight="30.0" prefWidth="180.0" styleClass="textfield" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <DatePicker fx:id="end_date" prefHeight="30.0" prefWidth="180.0" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <ComboBox fx:id="course" prefHeight="30.0" prefWidth="180.0" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </ComboBox>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

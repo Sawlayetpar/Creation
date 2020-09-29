@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" stylesheets="@../../StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tc.view.admin.TeacherDetail">
+   <children>
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="500.0" styleClass="bgcolor_blue">
+         <children>
+            <GridPane prefHeight="70.0" prefWidth="540.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="481.0" minWidth="10.0" prefWidth="463.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="37.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TEACHER" textAlignment="CENTER" wrappingWidth="160.13671875">
+                     <font>
+                        <Font name="Century" size="30.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="200.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <SVGPath content="M7.813 4.688c0-2.589 2.099-4.688 4.688-4.688s4.688 2.099 4.688 4.688c0 2.589-2.099 4.688-4.688 4.688s-4.688-2.099-4.688-4.688zM18.752 10.938h-0.865l-4.861 9.869 1.818-9.088-2.344-2.344-2.344 2.344 1.818 9.088-4.861-9.869h-0.865c-3.123 0-3.123 2.099-3.123 4.688v7.813h18.75v-7.813c0-2.588 0-4.688-3.123-4.688z">
+                     <GridPane.margin>
+                        <Insets left="175.0" />
+                     </GridPane.margin>
+                  </SVGPath>
+                  <SVGPath fx:id="back" content="M21.27 19.512l-4.512-4.512 4.512-4.512-1.758-1.758-4.512 4.512-4.512-4.512-1.758 1.758 4.512 4.512-4.512 4.512 1.758 1.758 4.512-4.512 4.512 4.512zM15 2.52q5.156 0 8.818 3.662t3.662 8.818-3.662 8.818-8.818 3.662-8.818-3.662-3.662-8.818 3.662-8.818 8.818-3.662z" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="30.0" left="5.0" />
+                     </GridPane.margin>
+                  </SVGPath>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <GridPane prefHeight="330.0" prefWidth="500.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="174.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="326.0" minWidth="10.0" prefWidth="326.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NAME" wrappingWidth="98.13671875">
+               <GridPane.margin>
+                  <Insets left="80.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PHONE" wrappingWidth="98.13671875" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="80.0" />
+               </GridPane.margin>
+            </Text>
+            <TextField fx:id="name" alignment="CENTER_RIGHT" prefHeight="30.0" promptText="name" styleClass="textfield" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" right="50.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Ebrima" size="15.0" />
+               </font>
+            </TextField>
+            <Button fx:id="cancle" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" text="CANCLE" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="save" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" text="SAVE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="180.0" />
+               </GridPane.margin>
+            </Button>
+            <TextField fx:id="phone" alignment="CENTER_RIGHT" prefHeight="30.0" promptText="phone" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Ebrima" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" right="50.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

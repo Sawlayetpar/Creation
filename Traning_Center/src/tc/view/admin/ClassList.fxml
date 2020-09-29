@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="650.0" stylesheets="@../../StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tc.view.admin.ClassList">
+   <children>
+      <GridPane alignment="CENTER" prefHeight="80.0" prefWidth="650.0" styleClass="bgcolor_blue">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="620.0" minWidth="10.0" prefWidth="617.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="319.0" minWidth="40.0" prefWidth="33.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CLASSES LIST" wrappingWidth="301.13671875">
+               <font>
+                  <Font name="Century" size="40.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="200.0" />
+               </GridPane.margin>
+            </Text>
+            <SVGPath fx:id="cancle" content="M24.814 22.764l-5.264-5.264 5.264-5.264-2.051-2.051-5.264 5.264-5.264-5.264-2.051 2.051 5.264 5.264-5.264 5.264 2.051 2.051 5.264-5.264 5.264 5.264zM17.5 2.939q6.016 0 10.288 4.272t4.272 10.288-4.272 10.288-10.288 4.272-10.288-4.272-4.272-10.288 4.272-10.288 10.288-4.272z" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="30.0" left="5.0" />
+               </GridPane.margin>
+            </SVGPath>
+         </children>
+      </GridPane>
+      <GridPane alignment="CENTER" prefHeight="70.0" prefWidth="650.0" styleClass="bgcolor_blue">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="447.0" minWidth="10.0" prefWidth="447.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="320.0" minWidth="10.0" prefWidth="203.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <SVGPath fx:id="add_new" content="M19.25 15.75h7v3.5h-7v7h-3.5v-7h-7v-3.5h7v-7h3.5v7zM17.5 35c-9.665 0-17.5-7.835-17.5-17.5s7.835-17.5 17.5-17.5v0c9.665 0 17.5 7.835 17.5 17.5s-7.835 17.5-17.5 17.5v0zM17.5 31.5c7.732 0 14-6.268 14-14s-6.268-14-14-14v0c-7.732 0-14 6.268-14 14s6.268 14 14 14v0z" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </SVGPath>
+            <ComboBox fx:id="course_search" prefHeight="40.0" prefWidth="298.0" promptText="Courses" styleClass="textfield">
+               <GridPane.margin>
+                  <Insets left="120.0" right="60.0" />
+               </GridPane.margin>
+            </ComboBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </GridPane>
+      <TableView fx:id="class_table" prefHeight="400.0" prefWidth="650.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="START DATE">
+          <cellValueFactory><PropertyValueFactory property="start_date" /></cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="75.0" text="END DATE">
+            <cellValueFactory><PropertyValueFactory property="end_date" /></cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="75.0" text="COURSE">
+            <cellValueFactory><PropertyValueFactory property="course" /></cellValueFactory>
+          </TableColumn>
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Classes : ">
+               <font>
+                  <Font name="MS Reference Specialty" size="25.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="8.0" />
+               </HBox.margin>
+            </Text>
+            <Label fx:id="number">
+               <font>
+                  <Font name="MS Reference Specialty" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</VBox>

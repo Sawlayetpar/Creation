@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="900.0" stylesheets="@../../StudentStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tc.view.student.Student_Home">
+	<children>
+		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="801.0" styleClass="bgcolor_blue">
+			<children>
+				<SVGPath content="M40 37.5v-2.5h-2.5v-15h2.5v-2.5h-7.5v2.5h2.5v15h-7.5v-15h2.5v-2.5h-7.5v2.5h2.5v15h-7.5v-15h2.5v-2.5h-7.5v2.5h2.5v15h-7.5v-15h2.5v-2.5h-7.5v2.5h2.5v15h-2.5v2.5h-2.5v2.5h42.5v-2.5h-2.5z M20 0h2.5l20 12.5v2.5h-42.5v-2.5l20-12.5z">
+					<HBox.margin>
+						<Insets />
+					</HBox.margin>
+				</SVGPath>
+				<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Training Center" textAlignment="CENTER" wrappingWidth="439.13671875">
+					<font>
+						<Font name="Arial Black" size="50.0" />
+					</font>
+				</Text>
+				<SVGPath content="M40 37.5v-2.5h-2.5v-15h2.5v-2.5h-7.5v2.5h2.5v15h-7.5v-15h2.5v-2.5h-7.5v2.5h2.5v15h-7.5v-15h2.5v-2.5h-7.5v2.5h2.5v15h-7.5v-15h2.5v-2.5h-7.5v2.5h2.5v15h-2.5v2.5h-2.5v2.5h42.5v-2.5h-2.5z M20 0h2.5l20 12.5v2.5h-42.5v-2.5l20-12.5z" />
+			</children>
+		</HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" styleClass="bgcolor_blue">
+         <children>
+      				<TextField fx:id="course_search" alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="370.0" promptText="Search Courses" styleClass="textfield">
+      					<font>
+      						<Font name="Cambria Italic" size="20.0" />
+      					</font>
+      					<cursor>
+      						<Cursor fx:constant="TEXT" />
+      					</cursor>
+      				</TextField>
+         </children>
+      </HBox>
+		<ScrollPane prefHeight="650.0" prefWidth="900.0">
+         <content>
+            <TilePane fx:id="tile" hgap="20.0" prefHeight="650.0" prefWidth="900.0" vgap="20.0" />
+         </content>
+		</ScrollPane>
+		<HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="900.0" styleClass="bgcolor_white">
+			<children>
+				<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Courses : ">
+					<font>
+						<Font size="20.0" />
+					</font>
+					<HBox.margin>
+						<Insets left="15.0" />
+					</HBox.margin>
+				</Text>
+				<Label fx:id="total_course" text="0">
+					<font>
+						<Font name="MS Reference Specialty" size="20.0" />
+					</font>
+				</Label>
+			</children>
+		</HBox>
+	</children>
+</VBox>

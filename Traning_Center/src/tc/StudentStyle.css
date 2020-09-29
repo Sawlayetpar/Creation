@@ -1,0 +1,25 @@
+.bgcolor_blue{
+	-fx-background-color: #4bd6ff;
+}
+
+.bgcolor_white{
+	-fx-background-color: #eeeeee;
+}
+
+.textfield{
+	-fx-background-color: transparent;
+	-fx-border-color: black;
+	-fx-border-radius: 8px;
+	-fx-border-style: solid;
+	-fx-prompt-text-fill: #000000;
+}
+
+.btn{
+	-fx-background-color: transparent ;
+	-fx-border-color: black;
+	-fx-border-radius: 16px;
+	-fx-border-style: dashed;
+	-fx-font-family: Constantia;
+	-fx-font-size: 18px;
+	-fx-font-style: oblique;
+}

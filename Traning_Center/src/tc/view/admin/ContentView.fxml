@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" styleClass="bgcolor_white" stylesheets="@../../StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tc.view.admin.ContentView">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="bgcolor_blue">
+         <children>
+            <GridPane prefHeight="100.0" prefWidth="600.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="427.0" minWidth="10.0" prefWidth="290.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="248.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="0.0" prefWidth="60.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox fx:id="back" alignment="CENTER" prefHeight="65.0" prefWidth="60.0" GridPane.columnIndex="2">
+                     <children>
+                        <SVGPath content="M0.781 12.5l11.719 11.719v-7.031h12.5v-9.375h-12.5v-7.031z" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BACK">
+                           <font>
+                              <Font name="Impact" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="30.0" top="30.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Content" wrappingWidth="160.13671875">
+                     <GridPane.margin>
+                        <Insets left="120.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Century" size="25.0" />
+                     </font>
+                  </Text>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <VBox fx:id="add_new" alignment="CENTER" prefHeight="82.0" prefWidth="37.0">
+                           <children>
+                              <SVGPath content="M13.75 11.25h5v2.5h-5v5h-2.5v-5h-5v-2.5h5v-5h2.5v5zM12.5 25c-6.904 0-12.5-5.596-12.5-12.5s5.596-12.5 12.5-12.5v0c6.904 0 12.5 5.596 12.5 12.5s-5.596 12.5-12.5 12.5v0zM12.5 22.5c5.523 0 10-4.477 10-10s-4.477-10-10-10v0c-5.523 0-10 4.477-10 10s4.477 10 10 10v0z" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="30.0" top="30.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <HBox fx:id="numbers" alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="213.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox fx:id="view" prefHeight="500.0" prefWidth="600.0" />
+   </children>
+</VBox>

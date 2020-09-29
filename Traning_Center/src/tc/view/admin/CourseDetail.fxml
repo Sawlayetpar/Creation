@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" stylesheets="@../../StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tc.view.admin.CourseDetail">
+   <children>
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="500.0" styleClass="bgcolor_blue">
+         <children>
+            <GridPane prefHeight="70.0" prefWidth="540.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="481.0" minWidth="10.0" prefWidth="463.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="37.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Course" textAlignment="CENTER" wrappingWidth="100.13671875">
+                     <font>
+                        <Font name="Century" size="30.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="200.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <SVGPath content="M10.619 4.227l-4.709-1.262c-0.433-0.116-0.878 0.141-0.995 0.574l-4.837 18.051c-0.116 0.434 0.141 0.879 0.575 0.996l4.708 1.262c0.433 0.116 0.879-0.141 0.995-0.574l4.837-18.051c0.115-0.433-0.141-0.879-0.575-0.995zM6.321 20.266c-0.349 1.301-1.684 2.072-2.985 1.723s-2.072-1.684-1.723-2.985 1.684-2.073 2.985-1.723c1.301 0.349 2.072 1.685 1.723 2.985zM7.255 16.784l-4.708-1.262 2.523-9.418 4.709 1.263-2.524 9.417zM15.387 18.688c-0.674 0-1.219 0.546-1.219 1.219s0.545 1.219 1.219 1.219c0.673 0 1.219-0.546 1.219-1.219s-0.546-1.219-1.219-1.219zM8.784 7.941l-3.14-0.841-0.21 0.785 3.139 0.841 0.21-0.785zM8.152 10.295l0.211-0.785-3.139-0.841-0.21 0.785 3.139 0.841zM4.27 18.507c-0.65-0.175-1.319 0.212-1.493 0.862s0.211 1.319 0.862 1.493c0.65 0.175 1.319-0.211 1.493-0.862s-0.212-1.318-0.862-1.493zM24.325 7.313h-3.25v0.813h3.25v-0.813zM24.325 10.563h-3.25v0.813h3.25v-0.813zM24.325 8.938h-3.25v0.813h3.25v-0.813zM22.7 18.688c-0.674 0-1.219 0.546-1.219 1.219s0.545 1.219 1.219 1.219c0.673 0 1.219-0.546 1.219-1.219s-0.546-1.219-1.219-1.219zM25.137 3.25h-4.875c-0.449 0-0.813 0.363-0.813 0.813v18.688c0 0.448 0.363 0.813 0.813 0.813h4.875c0.449 0 0.813-0.364 0.813-0.813v-18.688c0-0.449-0.365-0.813-0.813-0.813zM22.7 22.344c-1.346 0-2.438-1.092-2.438-2.438s1.091-2.438 2.438-2.438c1.346 0 2.438 1.091 2.438 2.438s-1.092 2.438-2.438 2.438zM25.137 16.25h-4.875v-9.75h4.875v9.75zM17.012 7.313h-3.25v0.813h3.25v-0.813zM17.012 10.563h-3.25v0.813h3.25v-0.813zM17.825 3.25h-4.875c-0.449 0-0.813 0.363-0.813 0.813v18.688c0 0.448 0.363 0.813 0.813 0.813h4.875c0.449 0 0.813-0.364 0.813-0.813v-18.688c0-0.449-0.365-0.813-0.813-0.813zM15.387 22.293c-1.346 0-2.438-1.092-2.438-2.438s1.091-2.438 2.438-2.438c1.345 0 2.437 1.091 2.437 2.438s-1.092 2.438-2.437 2.438zM17.825 16.25h-4.875v-9.75h4.875v9.75zM17.012 8.938h-3.25v0.813h3.25v-0.813zM4.592 11.023l3.139 0.841 0.211-0.785-3.139-0.841-0.21 0.785z">
+                     <GridPane.margin>
+                        <Insets left="175.0" />
+                     </GridPane.margin>
+                  </SVGPath>
+                  <SVGPath fx:id="back" content="M21.27 19.512l-4.512-4.512 4.512-4.512-1.758-1.758-4.512 4.512-4.512-4.512-1.758 1.758 4.512 4.512-4.512 4.512 1.758 1.758 4.512-4.512 4.512 4.512zM15 2.52q5.156 0 8.818 3.662t3.662 8.818-3.662 8.818-8.818 3.662-8.818-3.662-3.662-8.818 3.662-8.818 8.818-3.662z" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="30.0" left="5.0" />
+                     </GridPane.margin>
+                  </SVGPath>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <GridPane prefHeight="330.0" prefWidth="500.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="174.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="326.0" minWidth="10.0" prefWidth="326.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NAME" wrappingWidth="98.13671875">
+               <GridPane.margin>
+                  <Insets left="80.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="LEVEL" wrappingWidth="98.13671875" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="80.0" />
+               </GridPane.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DURATION" wrappingWidth="98.13671875" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="80.0" />
+               </GridPane.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="FEES" wrappingWidth="98.13671875" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="80.0" />
+               </GridPane.margin>
+            </Text>
+            <TextField fx:id="name" alignment="CENTER_RIGHT" prefHeight="30.0" promptText="name" styleClass="textfield" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" right="50.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Ebrima" size="15.0" />
+               </font>
+            </TextField>
+            <Button fx:id="cancle" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" text="CANCLE" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="save" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" text="SAVE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="180.0" />
+               </GridPane.margin>
+            </Button>
+            <TextField fx:id="level" alignment="CENTER_RIGHT" prefHeight="30.0" promptText="level" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Ebrima" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" right="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="duration" alignment="CENTER_RIGHT" prefHeight="30.0" promptText="duration" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Ebrima" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" right="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="fees" alignment="CENTER_RIGHT" prefHeight="30.0" promptText="fees" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Ebrima" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" right="50.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

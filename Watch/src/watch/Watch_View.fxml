@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="watch.Controller">
+   <children>
+      <GridPane prefHeight="250.0" prefWidth="300.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="37.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="117.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="38.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#pause" prefHeight="30.0" prefWidth="30.0" GridPane.rowIndex="3">
+               <graphic>
+                  <SVGPath content="M2.93 17.070c-1.884-1.821-3.053-4.37-3.053-7.193 0-5.523 4.477-10 10-10 2.823 0 5.372 1.169 7.19 3.050l0.003 0.003c1.737 1.796 2.807 4.247 2.807 6.947 0 5.523-4.477 10-10 10-2.7 0-5.151-1.070-6.95-2.81l0.003 0.003zM7 6v8h2v-8h-2zM11 6v8h2v-8h-2z" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="35.0" />
+               </GridPane.margin></Button>
+            <Button mnemonicParsing="false" onAction="#hour_increase" prefHeight="30.0" prefWidth="30.0">
+               <graphic>
+                  <SVGPath content="M15.589 11.911l-5-5c-0.326-0.326-0.853-0.326-1.178 0l-5 5c-0.326 0.326-0.326 0.853 0 1.178s0.853 0.326 1.178 0l4.411-4.411 4.411 4.411c0.326 0.326 0.853 0.326 1.178 0s0.326-0.853 0-1.178z" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="35.0" />
+               </GridPane.margin></Button>
+            <Button mnemonicParsing="false" onAction="#play" prefHeight="30.0" prefWidth="30.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <graphic>
+                  <SVGPath content="M8.016 5.016l10.969 6.984-10.969 6.984v-13.969z" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="35.0" />
+               </GridPane.margin></Button>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <children>
+                  <Text fx:id="hour" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER" wrappingWidth="100.0">
+                     <font>
+                        <Font name="Consolas" size="60.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="H" textAlignment="CENTER" wrappingWidth="101.962890625">
+                     <font>
+                        <Font name="MingLiU-ExtB" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Text fx:id="minute" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER" wrappingWidth="100.0">
+                     <font>
+                        <Font name="Consolas" size="60.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" wrappingWidth="101.962890625">
+                     <font>
+                        <Font name="MingLiU-ExtB" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Text fx:id="seconds" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER" wrappingWidth="100.0">
+                     <font>
+                        <Font name="Consolas" size="60.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="S" textAlignment="CENTER" wrappingWidth="101.962890625">
+                     <font>
+                        <Font name="MingLiU_HKSCS-ExtB" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#seconds_increase" prefHeight="30.0" prefWidth="30.0" GridPane.columnIndex="2">
+               <graphic>
+                  <SVGPath content="M15.589 11.911l-5-5c-0.326-0.326-0.853-0.326-1.178 0l-5 5c-0.326 0.326-0.326 0.853 0 1.178s0.853 0.326 1.178 0l4.411-4.411 4.411 4.411c0.326 0.326 0.853 0.326 1.178 0s0.326-0.853 0-1.178z" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="35.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#minute_increase" prefHeight="30.0" prefWidth="30.0" GridPane.columnIndex="1">
+               <graphic>
+                  <SVGPath content="M15.589 11.911l-5-5c-0.326-0.326-0.853-0.326-1.178 0l-5 5c-0.326 0.326-0.326 0.853 0 1.178s0.853 0.326 1.178 0l4.411-4.411 4.411 4.411c0.326 0.326 0.853 0.326 1.178 0s0.326-0.853 0-1.178z" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="35.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#hour_decrease" prefHeight="30.0" prefWidth="30.0" GridPane.rowIndex="2">
+               <graphic>
+                  <SVGPath content="M4.411 8.089l5 5c0.326 0.326 0.853 0.326 1.178 0l5-5c0.326-0.326 0.326-0.853 0-1.178s-0.853-0.326-1.178 0l-4.411 4.411-4.411-4.411c-0.326-0.326-0.853-0.326-1.178 0s-0.326 0.853 0 1.178z" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="35.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#seconds_decrease" prefHeight="30.0" prefWidth="30.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <graphic>
+                  <SVGPath content="M4.411 8.089l5 5c0.326 0.326 0.853 0.326 1.178 0l5-5c0.326-0.326 0.326-0.853 0-1.178s-0.853-0.326-1.178 0l-4.411 4.411-4.411-4.411c-0.326-0.326-0.853-0.326-1.178 0s-0.326 0.853 0 1.178z" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="35.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#minute_decrease" prefHeight="30.0" prefWidth="30.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <graphic>
+                  <SVGPath content="M4.411 8.089l5 5c0.326 0.326 0.853 0.326 1.178 0l5-5c0.326-0.326 0.326-0.853 0-1.178s-0.853-0.326-1.178 0l-4.411 4.411-4.411-4.411c-0.326-0.326-0.853-0.326-1.178 0s-0.326 0.853 0 1.178z" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="35.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#reset" prefHeight="30.0" prefWidth="30.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <graphic>
+                  <SVGPath content="M15 11.25c0 2.756-2.241 5-5 5s-5-2.244-5-5 2.241-5 5-5l1.474 0.017-0.728 0.728 1.768 1.768 3.758-3.762-3.758-3.75-1.768 1.767 0.738 0.732h-1.484c-4.141 0-7.5 3.357-7.5 7.5s3.359 7.5 7.5 7.5 7.5-3.357 7.5-7.5h-2.5z" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="35.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

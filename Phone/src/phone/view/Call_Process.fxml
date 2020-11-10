@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" stylesheets="@../callStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="phone.view.Call_Process">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <GridPane prefHeight="50.0" prefWidth="300.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text fx:id="seconds" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER" wrappingWidth="40.13671875" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Cambria" size="25.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="minute" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER" wrappingWidth="40.13671875">
+                     <font>
+                        <Font name="Cambria" size="25.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="100.0" />
+                     </GridPane.margin>
+                  </Text>
+               </children>
+            </GridPane>
+            <GridPane prefHeight="150.0" prefWidth="300.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#call_end" prefHeight="45.0" prefWidth="100.0" styleClass="end" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <graphic>
+                        <SVGPath content="M24.838 14.062c0.195 1.355 0.323 3.208-0.285 3.917-1.004 1.173-7.366 1.173-7.366-1.173 0-1.182 1.046-1.956 0.042-3.129-0.988-1.154-2.759-1.173-4.729-1.173s-3.741 0.019-4.729 1.173c-1.004 1.173 0.042 1.948 0.042 3.129 0 2.346-6.362 2.346-7.366 1.173-0.607-0.709-0.48-2.563-0.285-3.917 0.15-0.904 0.53-1.88 1.747-3.125 0-0 0-0 0-0 1.825-1.703 4.586-3.094 10.494-3.124v-0.001c0.033 0 0.065 0 0.098 0s0.065-0 0.098-0v0.001c5.908 0.030 8.669 1.422 10.494 3.124 0 0 0 0 0 0 1.216 1.245 1.596 2.221 1.747 3.125z" fill="#dfe8df" />
+                     </graphic>
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Label fx:id="display_number" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="300.0" textAlignment="CENTER" GridPane.columnSpan="3">
+                     <font>
+                        <Font name="Century" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</VBox>

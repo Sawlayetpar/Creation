@@ -25,8 +25,9 @@ public class Login implements Initializable {
 	void submit() {
 		try {
 		Phone phone = dao.login(number.getText());
-		Security.setNumber(phone);
-		Security.setBalance(phone);
+		Security.setPhone(phone);
+//		Security.setBalance(phone);
+//		Security.setCode(phone);
 		Home.show();
 		number.getScene().getWindow().hide();
 		} catch (Exception e) {

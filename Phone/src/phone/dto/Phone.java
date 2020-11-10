@@ -4,7 +4,8 @@ public class Phone {
 
 	private int id;
 	private String phone_no;
-	private String balance;
+	private int balance;
+	private String code;
 
 	public int getId() {
 		return id;
@@ -22,12 +23,19 @@ public class Phone {
 		this.phone_no = phone_no;
 	}
 
-	public String getBalance() {
+	public int getBalance() {
 		return balance;
 	}
 
-	public void setBalance(String balance) {
+	public void setBalance(int balance) {
 		this.balance = balance;
 	}
 
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
 }

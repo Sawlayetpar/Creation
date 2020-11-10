@@ -104,7 +104,12 @@
                   <Font name="Century" size="25.0" />
                </font>
             </Text>
-            <Label fx:id="number" prefHeight="32.0" prefWidth="170.0">
+            <Label fx:id="code" prefHeight="32.0" prefWidth="46.0">
+               <font>
+                  <Font name="MS PGothic" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="number" prefHeight="30.0" prefWidth="170.0">
                <font>
                   <Font name="MS PGothic" size="30.0" />
                </font>

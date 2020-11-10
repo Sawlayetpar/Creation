@@ -2,6 +2,7 @@ package phone.view;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.function.Consumer;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,8 +14,10 @@ import javafx.scene.shape.SVGPath;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import phone.common.Security;
+import phone.dao.Dao;
+import phone.dto.Phone;
 
-public class Home implements Initializable{
+public class Home implements Initializable,Consumer<Phone>{
 
 	@FXML
 	private SVGPath exit;
@@ -26,25 +29,36 @@ public class Home implements Initializable{
 	private Label number;
 	
 	@FXML
+	private Label code;
+	private Dao dao;
+	
+	private void hide() {
+		code.getScene().getWindow().hide();
+	}
+	@FXML
 	void call() {
 		Call.show();
+		hide();
 	}
 
 	@FXML
 	void topup() {
-		TopUp.show();
+		Number.show(Security.getPhone(),this);
+		hide();
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		balance.setText(Security.getBalance().getBalance());
-		number.setText(Security.getNumber().getPhone_no());
+		dao = Dao.getInstance();
+		balance.setText(String.valueOf(Security.getPhone().getBalance()));
+		number.setText(Security.getPhone().getPhone_no());
+		code.setText(Security.getPhone().getCode());
 		exit.setOnMouseClicked(e -> number.getScene().getWindow().hide());
 	}
 	
 	public static void show() {
 		try {
-			Parent root = FXMLLoader.load(TopUp.class.getResource("Home.fxml"));
+			Parent root = FXMLLoader.load(Home.class.getResource("Home.fxml"));
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.initStyle(StageStyle.UNDECORATED);
@@ -54,5 +68,9 @@ public class Home implements Initializable{
 		}
 	}
 	
-
+	@Override
+	public void accept(Phone t) {
+		dao.topup(t);
+	}
+	
 }

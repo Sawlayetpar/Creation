@@ -6,8 +6,11 @@ import java.util.ResourceBundle;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import phone.common.ApplicationMessage;
+import phone.common.Message;
 import phone.common.Security;
 import phone.dao.Dao;
 import phone.dto.Phone;
@@ -25,13 +28,14 @@ public class Login implements Initializable {
 	void submit() {
 		try {
 		Phone phone = dao.login(number.getText());
+		if(null == phone) {
+			throw new ApplicationMessage("number not exist");
+		}
 		Security.setPhone(phone);
-//		Security.setBalance(phone);
-//		Security.setCode(phone);
 		Home.show();
 		number.getScene().getWindow().hide();
 		} catch (Exception e) {
-			e.printStackTrace();
+			Message.showMessage(AlertType.WARNING, e.getMessage());
 		}
 	}
 

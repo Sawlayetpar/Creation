@@ -66,6 +66,22 @@
                         <Font name="Century" size="30.0" />
                      </font>
                   </Label>
+                  <Text fx:id="not" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="50.13671875" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="reach" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Text>
                </children>
             </GridPane>
          </children>

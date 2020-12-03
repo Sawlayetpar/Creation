@@ -31,18 +31,17 @@ public class Number implements Initializable {
 	private Consumer<Phone> addhander;
 	private int c_bal = Security.getPhone().getBalance();
 	
-	private void disAomunt() {
+	private void displayAomunt() {
 		int bal = Integer.parseInt(amount.getText());
 		Security.getPhone().setBalance(bal + c_bal);
 	}
 
 	@FXML
 	void confirm() {
-
 		try {
 			topUpNumber();
 			addhander.accept(phone);
-			disAomunt();
+			displayAomunt();
 			cancle.getScene().getWindow().hide();
 			Home.show();
 		} catch (Exception e) {
@@ -53,7 +52,6 @@ public class Number implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		
 		cancle.setOnMouseClicked(e -> {
 			number.getScene().getWindow().hide();
 			Home.show();

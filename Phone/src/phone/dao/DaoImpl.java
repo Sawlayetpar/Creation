@@ -53,11 +53,16 @@ public class DaoImpl implements Dao {
 		return phone;
 	}
 	
+	@Override
 	public void call(Phone phone) {
-		String sql = "delete from ";
+		String sql = "update phone set balance = balance - ?" +" where id = ? ";
 		try(Connection connection = Connection_Manager.getConnection();
 				PreparedStatement statement = connection.prepareStatement(sql)) {
 			
+			statement.setInt(1, phone.getBalance());
+			statement.setInt(2, phone.getId());
+			
+			statement.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

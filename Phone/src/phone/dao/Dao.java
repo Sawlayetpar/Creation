@@ -10,4 +10,5 @@ public interface Dao {
 	
 	void topup(Phone phone);
 	Phone login(String number);
+	void call(Phone phone);
 }

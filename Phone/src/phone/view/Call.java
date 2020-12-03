@@ -2,6 +2,7 @@ package phone.view;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.function.Consumer;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,8 +18,10 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import phone.common.Common;
 import phone.common.Security;
+import phone.dao.Dao;
+import phone.dto.Phone;
 
-public class Call implements Initializable {
+public class Call implements Initializable,Consumer<Phone> {
 
 	@FXML
 	private Button one;
@@ -63,16 +66,29 @@ public class Call implements Initializable {
 	private SVGPath exit;
 
 	private StringBuilder builder = new StringBuilder();
+	private Dao dao;
 
+	private void hide() {
+		screen.getScene().getWindow().hide();
+	}
+	
+	@FXML
+    void history() {
+		hide();
+		History.show();
+    }
 	@FXML
 	void call() {
 		if (Common.validNumber(screen.getText())) {
-			System.out.println("Call Processing");
-			long i = Long.parseLong(screen.getText());
-			Security.setNumber(i);
-			Call_Process.show();
-			screen.getScene().getWindow().hide();
-			
+			String num = screen.getText();
+			Security.setNumber(num);
+			if (Security.getPhone().getBalance() > 0) {
+				Call_Process.show(Security.getPhone(),this);
+				hide();
+			} else {
+				screen.setText("Sorry Your Balnce Is Low");
+			}
+
 		} else {
 			screen.setText("invalid number");
 		}
@@ -93,8 +109,10 @@ public class Call implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		dao = Dao.getInstance();
+
 		exit.setOnMouseClicked(e -> {
-			screen.getScene().getWindow().hide();
+			hide();
 			Home.show();
 		});
 
@@ -167,5 +185,10 @@ public class Call implements Initializable {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public void accept(Phone t) {
+		dao.call(t);
 	}
 }

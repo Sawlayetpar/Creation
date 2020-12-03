@@ -67,6 +67,7 @@ public class Call_Process implements Initializable {
 		secUp();
 		if (sec == 0)
 			minUp();
+//		
 	}
 
 	private int totalSeconds() {
